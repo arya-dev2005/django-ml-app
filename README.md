@@ -58,4 +58,4 @@ python manage.py runserver
 - **Output:** Predicted price ($)
 
 ## Author
-Your Name
+Arya Das
