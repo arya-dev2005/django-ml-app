@@ -1,0 +1,30 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>👋 Welcome, {{ user.username }}!</h2>
+<p style="text-align: center; color: #666; margin-bottom: 30px;">
+    You are successfully logged in.
+</p>
+
+<div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+    <h3 style="color: #333; margin-bottom: 10px;">🎯 Quick Actions</h3>
+    <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 10px;">
+            <a href="{% url 'predict' %}" style="color: #667eea; text-decoration: none; font-weight: 600;">
+                📊 Make ML Predictions
+            </a>
+        </li>
+        <li style="margin-bottom: 10px;">
+            <a href="/admin/" style="color: #667eea; text-decoration: none; font-weight: 600;">
+                ⚙️ Admin Panel (if superuser)
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="nav-links">
+    <a href="{% url 'logout' %}">🚪 Logout</a>
+</div>
+{% endblock %}
